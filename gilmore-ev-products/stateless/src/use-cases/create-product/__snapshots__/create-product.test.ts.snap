@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`create-product-use-case should create a product successfully 1`] = `
+{
+  "available": true,
+  "category": "Charger",
+  "created": "2024-02-01T00:00:00.000Z",
+  "description": "Fast charging station for electric vehicles",
+  "id": "f39e49ad-8f88-448f-8a15-41d560ad6d70",
+  "name": "QuickCharge Station",
+  "price": 2000,
+  "specifications": {
+    "connectorType": "CCS",
+    "powerOutput": 150,
+    "type": "DC Fast Charger",
+  },
+  "updated": "2024-02-01T00:00:00.000Z",
+}
+`;

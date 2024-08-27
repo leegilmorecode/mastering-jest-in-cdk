@@ -1,0 +1,39 @@
+{
+  "info": {
+    "_postman_id": "f48a642e-e24a-4fcb-b65d-f15c40b50f3e",
+    "name": "gilmore-ev-products",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "752706"
+  },
+  "item": [
+    {
+      "name": "create product",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"TeslaX Model S\",\n  \"description\": \"High-performance luxury electric sedan with cutting-edge technology and long range.\",\n  \"price\": 89990,\n  \"category\": \"Vehicle\",\n  \"tags\": [\"luxury\", \"sedan\", \"long-range\", \"autopilot\"],\n  \"available\": true,\n  \"releaseDate\": \"2023-09-15T00:00:00Z\",\n  \"specifications\": {\n    \"range\": 405,\n    \"batteryCapacity\": 100,\n    \"topSpeed\": 155,\n    \"acceleration\": 3.1,\n    \"seatingCapacity\": 5,\n    \"drivetrain\": \"AWD\"\n  }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://{{url}}/api/v1/products/",
+          "protocol": "https",
+          "host": ["{{url}}"],
+          "path": ["api", "v1", "products", ""]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "url",
+      "value": "your-rest-id.execute-api.your-region.amazonaws.com"
+    }
+  ]
+}

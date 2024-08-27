@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SimpleTable when setting the stageName as production (prod) should create a dynamodb table with the correct properties 1`] = `
+{
+  "SimpleTable61792FB5": {
+    "DeletionPolicy": "Retain",
+    "Properties": {
+      "AttributeDefinitions": [
+        {
+          "AttributeName": "PK",
+          "AttributeType": "S",
+        },
+        {
+          "AttributeName": "SK",
+          "AttributeType": "S",
+        },
+      ],
+      "BillingMode": "PAY_PER_REQUEST",
+      "ContributorInsightsSpecification": {
+        "Enabled": true,
+      },
+      "KeySchema": [
+        {
+          "AttributeName": "PK",
+          "KeyType": "HASH",
+        },
+        {
+          "AttributeName": "SK",
+          "KeyType": "RANGE",
+        },
+      ],
+      "PointInTimeRecoverySpecification": {
+        "PointInTimeRecoveryEnabled": true,
+      },
+      "SSESpecification": {
+        "SSEEnabled": true,
+      },
+      "TableName": "SimpleTable-prod",
+    },
+    "Type": "AWS::DynamoDB::Table",
+    "UpdateReplacePolicy": "Retain",
+  },
+}
+`;
+
+exports[`SimpleTable when using default props without the optional props should create a dynamodb table with the correct properties 1`] = `
+{
+  "SimpleTable61792FB5": {
+    "DeletionPolicy": "Delete",
+    "Properties": {
+      "AttributeDefinitions": [
+        {
+          "AttributeName": "PK",
+          "AttributeType": "S",
+        },
+        {
+          "AttributeName": "SK",
+          "AttributeType": "S",
+        },
+      ],
+      "BillingMode": "PAY_PER_REQUEST",
+      "ContributorInsightsSpecification": {
+        "Enabled": false,
+      },
+      "KeySchema": [
+        {
+          "AttributeName": "PK",
+          "KeyType": "HASH",
+        },
+        {
+          "AttributeName": "SK",
+          "KeyType": "RANGE",
+        },
+      ],
+      "PointInTimeRecoverySpecification": {
+        "PointInTimeRecoveryEnabled": false,
+      },
+      "SSESpecification": {
+        "SSEEnabled": true,
+      },
+      "TableName": "SimpleTable-dev",
+    },
+    "Type": "AWS::DynamoDB::Table",
+    "UpdateReplacePolicy": "Delete",
+  },
+}
+`;
